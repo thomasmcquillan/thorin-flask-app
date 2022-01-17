@@ -12,7 +12,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="{{ url_for('index') }}">Start Bootstrap</a>
+			<a class="navbar-brand" href="{{ url_for('index') }}">Thorin &amp; Company</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	        Menu
 	        <i class="fas fa-bars"></i>
@@ -37,14 +37,14 @@
 	</nav>
 	
 	<!-- Page Header -->
-	<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+	<header class="masthead" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ec99ba4-5996-45a8-92fb-764fb1ad3c86/d5qxiyi-13697011-df96-40c0-b7d2-5b44cabc6112.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlYzk5YmE0LTU5OTYtNDVhOC05MmZiLTc2NGZiMWFkM2M4NlwvZDVxeGl5aS0xMzY5NzAxMS1kZjk2LTQwYzAtYjdkMi01YjQ0Y2FiYzYxMTIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Qzp3G7EzfGkW18-EicR23D7od-q8_CPTK2_7jCZSHDQ')">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-10 mx-auto">
 					<div class="site-heading">
-						<h1>Clean Blog</h1>
-						<span class="subheading">A Blog Theme by Start Bootstrap</span>
+						<h1>Thorin &amp Company</h1>
+						<span class="subheading">Thorin and his company of dwarves</span>
 					</div>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 							</a>
 						</li>
 					</ul>
-					<p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+					<p class="copyright text-muted">Copyright &copy; Your Website <span id="copyright"></span></p>
 				</div>
 			</div>
 		</div>
@@ -104,6 +104,10 @@
 	
 	<!-- Custom scripts for this template -->
 	<script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+
+	<script>
+		$("#copyright").text(new Date().getFullYear());
+	</script>
 
 </body>
 </html>
